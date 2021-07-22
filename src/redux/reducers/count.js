@@ -1,4 +1,4 @@
-import {INCREMENT, DECREMENT} from './constant'
+import {INCREMENT, DECREMENT, INCREMENT_ASYNC} from '../constant'
 // 该文件用于创建一个为count组件服务的reducer，reducer本质就是函数
 // reducer会接受到两个参数 preState（之前的状态） action（动作对象）
 const initSum = 0 // 初始化状态
@@ -6,9 +6,10 @@ const initSum = 0 // 初始化状态
 export default function countReducer (preState = initSum, action) {
   // if(preState === undefined) preState = 0
   const {type, data} = action
-  console.log(type, data, preState)
+  console.log(type, data, preState, action)
   switch (type){
     case INCREMENT:
+    case INCREMENT_ASYNC:
       return preState + data
     case DECREMENT:
       return preState - data

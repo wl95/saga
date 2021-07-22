@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 // 引入store
 import store from "../../redux/store"
 // 引入actionCreator 专门创建action对象
-import {createIncrementAction, createDecrementAction, createIncremenAsynctAction} from '../../redux/count_action'
+import {createIncrementAction, createDecrementAction, createIncremenAsynctAction} from '../../redux/actions/count'
 export default class summation extends Component{
   // 状态值
   state = {
@@ -69,7 +69,6 @@ export default class summation extends Component{
   }
   render(){
     const  { num } = this.state
-    console.log(store)
     return(
     <div>
       {/*<h1>当前求和为:{num}</h1>*/}
@@ -98,4 +97,4 @@ export default class summation extends Component{
     )
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(AddAddress)
+

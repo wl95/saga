@@ -1,23 +1,13 @@
-import logo from './logo.svg';
+import Countsum from './component/count/indexSage'
+import Person from './component/Person'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Countsum></Countsum>
+      <hr></hr>
+      <Person></Person>
     </div>
   );
 }
